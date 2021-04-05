@@ -6,7 +6,8 @@
  */
 
 #include "ADC.h"
-
+#include <util/delay.h>
+#define F_CPU 16000000
 void ADC_init()
 {
 	// Output adjust = right //

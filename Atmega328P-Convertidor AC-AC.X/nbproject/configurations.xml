@@ -17,6 +17,10 @@
           <itemPath>ADC.c</itemPath>
           <itemPath>ADC.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f5" displayName="PCINT" projectFiles="true">
+          <itemPath>PCINT.c</itemPath>
+          <itemPath>PCINT.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="PWM" projectFiles="true">
           <itemPath>PWM.c</itemPath>
           <itemPath>PWM.h</itemPath>

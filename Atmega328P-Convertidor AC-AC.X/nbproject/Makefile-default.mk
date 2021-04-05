@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=PWM.c main.c USARTAtmega328P.c ADC.c WatchDog.c
+SOURCEFILES_QUOTED_IF_SPACED=ADC.c PWM.c USARTAtmega328P.c WatchDog.c main.c PCINT.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/PWM.o ${OBJECTDIR}/main.o ${OBJECTDIR}/USARTAtmega328P.o ${OBJECTDIR}/ADC.o ${OBJECTDIR}/WatchDog.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/PWM.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/USARTAtmega328P.o.d ${OBJECTDIR}/ADC.o.d ${OBJECTDIR}/WatchDog.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ADC.o ${OBJECTDIR}/PWM.o ${OBJECTDIR}/USARTAtmega328P.o ${OBJECTDIR}/WatchDog.o ${OBJECTDIR}/main.o ${OBJECTDIR}/PCINT.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/ADC.o.d ${OBJECTDIR}/PWM.o.d ${OBJECTDIR}/USARTAtmega328P.o.d ${OBJECTDIR}/WatchDog.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/PCINT.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/PWM.o ${OBJECTDIR}/main.o ${OBJECTDIR}/USARTAtmega328P.o ${OBJECTDIR}/ADC.o ${OBJECTDIR}/WatchDog.o
+OBJECTFILES=${OBJECTDIR}/ADC.o ${OBJECTDIR}/PWM.o ${OBJECTDIR}/USARTAtmega328P.o ${OBJECTDIR}/WatchDog.o ${OBJECTDIR}/main.o ${OBJECTDIR}/PCINT.o
 
 # Source Files
-SOURCEFILES=PWM.c main.c USARTAtmega328P.c ADC.c WatchDog.c
+SOURCEFILES=ADC.c PWM.c USARTAtmega328P.c WatchDog.c main.c PCINT.c
 
 
 
@@ -94,17 +94,17 @@ MP_PROCESSOR_OPTION=ATmega328P
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/ADC.o: ADC.c  .generated_files/268a94cca3dbc683cfbbb299867cb0c74cf56451.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ADC.o.d 
+	@${RM} ${OBJECTDIR}/ADC.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC.o.d" -MT "${OBJECTDIR}/ADC.o.d" -MT ${OBJECTDIR}/ADC.o -o ${OBJECTDIR}/ADC.o ADC.c 
+	
 ${OBJECTDIR}/PWM.o: PWM.c  .generated_files/6c28289f409b117b3c7a5af20fba81abf3d4e499.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWM.o.d 
 	@${RM} ${OBJECTDIR}/PWM.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/PWM.o.d" -MT "${OBJECTDIR}/PWM.o.d" -MT ${OBJECTDIR}/PWM.o -o ${OBJECTDIR}/PWM.o PWM.c 
-	
-${OBJECTDIR}/main.o: main.c  .generated_files/835ea1b837cb0e135fe372c92be72726e3d3c820.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
 ${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/ffed104eb6cc8768517b45ebfb30beda06207c34.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
@@ -112,30 +112,36 @@ ${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/ffed104eb6cc
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/USARTAtmega328P.o.d" -MT "${OBJECTDIR}/USARTAtmega328P.o.d" -MT ${OBJECTDIR}/USARTAtmega328P.o -o ${OBJECTDIR}/USARTAtmega328P.o USARTAtmega328P.c 
 	
-${OBJECTDIR}/ADC.o: ADC.c  .generated_files/268a94cca3dbc683cfbbb299867cb0c74cf56451.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ADC.o.d 
-	@${RM} ${OBJECTDIR}/ADC.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC.o.d" -MT "${OBJECTDIR}/ADC.o.d" -MT ${OBJECTDIR}/ADC.o -o ${OBJECTDIR}/ADC.o ADC.c 
-	
 ${OBJECTDIR}/WatchDog.o: WatchDog.c  .generated_files/e67a1afa8ef1aa76ae04587841fd616c898800d0.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/WatchDog.o.d 
 	@${RM} ${OBJECTDIR}/WatchDog.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/WatchDog.o.d" -MT "${OBJECTDIR}/WatchDog.o.d" -MT ${OBJECTDIR}/WatchDog.o -o ${OBJECTDIR}/WatchDog.o WatchDog.c 
 	
+${OBJECTDIR}/main.o: main.c  .generated_files/835ea1b837cb0e135fe372c92be72726e3d3c820.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
+	
+${OBJECTDIR}/PCINT.o: PCINT.c  .generated_files/e75883b3b05de9ae587d34f91a1ac197127088ed.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PCINT.o.d 
+	@${RM} ${OBJECTDIR}/PCINT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/PCINT.o.d" -MT "${OBJECTDIR}/PCINT.o.d" -MT ${OBJECTDIR}/PCINT.o -o ${OBJECTDIR}/PCINT.o PCINT.c 
+	
 else
+${OBJECTDIR}/ADC.o: ADC.c  .generated_files/81713a5a389ef2142b0dddcd97490c850e28bc06.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ADC.o.d 
+	@${RM} ${OBJECTDIR}/ADC.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC.o.d" -MT "${OBJECTDIR}/ADC.o.d" -MT ${OBJECTDIR}/ADC.o -o ${OBJECTDIR}/ADC.o ADC.c 
+	
 ${OBJECTDIR}/PWM.o: PWM.c  .generated_files/8cc408da356db0a941c377f01666087364d57149.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWM.o.d 
 	@${RM} ${OBJECTDIR}/PWM.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/PWM.o.d" -MT "${OBJECTDIR}/PWM.o.d" -MT ${OBJECTDIR}/PWM.o -o ${OBJECTDIR}/PWM.o PWM.c 
-	
-${OBJECTDIR}/main.o: main.c  .generated_files/941a552004a6f64657501dfbb0b77f40c19ff72e.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
 ${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/ae6e04f7e62522f49ff16790dfc7f15e771063f9.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
@@ -143,17 +149,23 @@ ${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/ae6e04f7e625
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/USARTAtmega328P.o.d" -MT "${OBJECTDIR}/USARTAtmega328P.o.d" -MT ${OBJECTDIR}/USARTAtmega328P.o -o ${OBJECTDIR}/USARTAtmega328P.o USARTAtmega328P.c 
 	
-${OBJECTDIR}/ADC.o: ADC.c  .generated_files/81713a5a389ef2142b0dddcd97490c850e28bc06.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ADC.o.d 
-	@${RM} ${OBJECTDIR}/ADC.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC.o.d" -MT "${OBJECTDIR}/ADC.o.d" -MT ${OBJECTDIR}/ADC.o -o ${OBJECTDIR}/ADC.o ADC.c 
-	
 ${OBJECTDIR}/WatchDog.o: WatchDog.c  .generated_files/6dc28626744917cc4d8dc72da3b4824aa80717e0.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/WatchDog.o.d 
 	@${RM} ${OBJECTDIR}/WatchDog.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/WatchDog.o.d" -MT "${OBJECTDIR}/WatchDog.o.d" -MT ${OBJECTDIR}/WatchDog.o -o ${OBJECTDIR}/WatchDog.o WatchDog.c 
+	
+${OBJECTDIR}/main.o: main.c  .generated_files/941a552004a6f64657501dfbb0b77f40c19ff72e.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
+	
+${OBJECTDIR}/PCINT.o: PCINT.c  .generated_files/817c746236ec9a83b73912f694881d86eaf0fcd1.flag .generated_files/5956b3afcf9cb34aa02383370edf875e44e34c9f.flag
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PCINT.o.d 
+	@${RM} ${OBJECTDIR}/PCINT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/PCINT.o.d" -MT "${OBJECTDIR}/PCINT.o.d" -MT ${OBJECTDIR}/PCINT.o -o ${OBJECTDIR}/PCINT.o PCINT.c 
 	
 endif
 

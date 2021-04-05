@@ -15,12 +15,19 @@
 #include "ADC.h"
 #include "USARTAtmega328P.h"
 #include "WatchDog.h"
-#define _XTAL_FREQ 16000000
+#include "PCINT.h"
+#define F_CPU 16000000
 int _Contador = 0;
 unsigned char dutyCharArray[2];
 unsigned int duty, unidad, decena, centena;
 unsigned char Tx[2];
+unsigned char dato = 'R';
 int adcV;
+
+ISR (PCINT0_vect) {
+        PWM_setDuty(70);
+        PWM_on();
+}
 void Conversion_Char_Int(){
     //Otenemos la centena decena y unidad del array char que se genero al recibir los caracteres
     //de la comunicacion serial
@@ -43,16 +50,19 @@ void Desmenuzado_ADC(){
 
 void main(void) {
     cli();  
-    DDRB = (0<<PB4);
-    PWM_init(50);
-    ADC_init();
+
+    DDRB = 0b11111110;
+    PWM_init(1600);
     USART_init();
     WATCHDOG_init();
+    PCINT_init();
     sei(); 
+
     for(;;){
+      USART_SetData(dato);
         switch(USART_GetData()){
             case '#':
-                while(PINB != 0b0000001);
+                while(PINB != 0b1000000);
                 PWM_setDuty(90);
                 PWM_on();
                 break;
