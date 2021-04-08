@@ -25,8 +25,8 @@ unsigned char dato = 'R';
 int adcV;
 
 ISR (PCINT0_vect) {
-        PWM_setDuty(70);
-        PWM_on();
+      PWM_Update();
+      PORTB = (1<<PB2);
 }
 void Conversion_Char_Int(){
     //Otenemos la centena decena y unidad del array char que se genero al recibir los caracteres
@@ -51,11 +51,13 @@ void Desmenuzado_ADC(){
 void main(void) {
     cli();  
 
-    DDRB = 0b11111110;
+    DDRB = 0b11111100;
     PWM_init(1600);
     USART_init();
     WATCHDOG_init();
     PCINT_init();
+    PWM_setDuty(70);
+    PWM_on();
     sei(); 
 
     for(;;){

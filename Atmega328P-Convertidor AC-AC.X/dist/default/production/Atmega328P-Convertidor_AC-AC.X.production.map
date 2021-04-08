@@ -479,78 +479,78 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x110
+.debug_aranges  0x0000000000000000      0x118
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 build/default/production/ADC.o
  .debug_aranges
-                0x0000000000000028       0x38 build/default/production/PWM.o
+                0x0000000000000028       0x40 build/default/production/PWM.o
  .debug_aranges
-                0x0000000000000060       0x30 build/default/production/USARTAtmega328P.o
+                0x0000000000000068       0x30 build/default/production/USARTAtmega328P.o
  .debug_aranges
-                0x0000000000000090       0x28 build/default/production/WatchDog.o
+                0x0000000000000098       0x28 build/default/production/WatchDog.o
  .debug_aranges
-                0x00000000000000b8       0x38 build/default/production/main.o
+                0x00000000000000c0       0x38 build/default/production/main.o
  .debug_aranges
-                0x00000000000000f0       0x20 build/default/production/PCINT.o
+                0x00000000000000f8       0x20 build/default/production/PCINT.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x19ac
+.debug_info     0x0000000000000000     0x19df
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
  .debug_info    0x00000000000005f4      0x369 build/default/production/ADC.o
- .debug_info    0x000000000000095d      0x30c build/default/production/PWM.o
- .debug_info    0x0000000000000c69      0x2e4 build/default/production/USARTAtmega328P.o
- .debug_info    0x0000000000000f4d      0x2b3 build/default/production/WatchDog.o
- .debug_info    0x0000000000001200      0x534 build/default/production/main.o
- .debug_info    0x0000000000001734      0x278 build/default/production/PCINT.o
+ .debug_info    0x000000000000095d      0x329 build/default/production/PWM.o
+ .debug_info    0x0000000000000c86      0x2e4 build/default/production/USARTAtmega328P.o
+ .debug_info    0x0000000000000f6a      0x2b3 build/default/production/WatchDog.o
+ .debug_info    0x000000000000121d      0x54a build/default/production/main.o
+ .debug_info    0x0000000000001767      0x278 build/default/production/PCINT.o
 
-.debug_abbrev   0x0000000000000000      0x927
+.debug_abbrev   0x0000000000000000      0x936
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
  .debug_abbrev  0x00000000000005a2       0xdc build/default/production/ADC.o
- .debug_abbrev  0x000000000000067e       0x7e build/default/production/PWM.o
- .debug_abbrev  0x00000000000006fc       0x96 build/default/production/USARTAtmega328P.o
- .debug_abbrev  0x0000000000000792       0x6b build/default/production/WatchDog.o
- .debug_abbrev  0x00000000000007fd       0xe6 build/default/production/main.o
- .debug_abbrev  0x00000000000008e3       0x44 build/default/production/PCINT.o
+ .debug_abbrev  0x000000000000067e       0x8d build/default/production/PWM.o
+ .debug_abbrev  0x000000000000070b       0x96 build/default/production/USARTAtmega328P.o
+ .debug_abbrev  0x00000000000007a1       0x6b build/default/production/WatchDog.o
+ .debug_abbrev  0x000000000000080c       0xe6 build/default/production/main.o
+ .debug_abbrev  0x00000000000008f2       0x44 build/default/production/PCINT.o
 
-.debug_line     0x0000000000000000      0x770
+.debug_line     0x0000000000000000      0x78c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x137 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
  .debug_line    0x0000000000000137      0x121 build/default/production/ADC.o
- .debug_line    0x0000000000000258      0x110 build/default/production/PWM.o
- .debug_line    0x0000000000000368       0xee build/default/production/USARTAtmega328P.o
- .debug_line    0x0000000000000456       0x9b build/default/production/WatchDog.o
- .debug_line    0x00000000000004f1      0x1f7 build/default/production/main.o
- .debug_line    0x00000000000006e8       0x88 build/default/production/PCINT.o
+ .debug_line    0x0000000000000258      0x120 build/default/production/PWM.o
+ .debug_line    0x0000000000000378       0xee build/default/production/USARTAtmega328P.o
+ .debug_line    0x0000000000000466       0x9b build/default/production/WatchDog.o
+ .debug_line    0x0000000000000501      0x203 build/default/production/main.o
+ .debug_line    0x0000000000000704       0x88 build/default/production/PCINT.o
 
-.debug_frame    0x0000000000000000      0x1cc
+.debug_frame    0x0000000000000000      0x1dc
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x34 build/default/production/ADC.o
- .debug_frame   0x0000000000000034       0x60 build/default/production/PWM.o
- .debug_frame   0x0000000000000094       0x44 build/default/production/USARTAtmega328P.o
- .debug_frame   0x00000000000000d8       0x34 build/default/production/WatchDog.o
- .debug_frame   0x000000000000010c       0x9c build/default/production/main.o
- .debug_frame   0x00000000000001a8       0x24 build/default/production/PCINT.o
+ .debug_frame   0x0000000000000034       0x70 build/default/production/PWM.o
+ .debug_frame   0x00000000000000a4       0x44 build/default/production/USARTAtmega328P.o
+ .debug_frame   0x00000000000000e8       0x34 build/default/production/WatchDog.o
+ .debug_frame   0x000000000000011c       0x9c build/default/production/main.o
+ .debug_frame   0x00000000000001b8       0x24 build/default/production/PCINT.o
 
-.debug_str      0x0000000000000000      0x269
+.debug_str      0x0000000000000000      0x274
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
  .debug_str     0x0000000000000208        0x0 build/default/production/ADC.o
  .debug_str     0x0000000000000208        0x0 build/default/production/PWM.o
  .debug_str     0x0000000000000208        0x0 build/default/production/USARTAtmega328P.o
  .debug_str     0x0000000000000208        0x0 build/default/production/WatchDog.o
- .debug_str     0x0000000000000208       0x61 build/default/production/main.o
- .debug_str     0x0000000000000269        0x0 build/default/production/PCINT.o
+ .debug_str     0x0000000000000208       0x6c build/default/production/main.o
+ .debug_str     0x0000000000000274        0x0 build/default/production/PCINT.o
 
-.debug_loc      0x0000000000000000       0xf3
+.debug_loc      0x0000000000000000       0xae
  *(.debug_loc)
  .debug_loc     0x0000000000000000       0x52 build/default/production/ADC.o
- .debug_loc     0x0000000000000052       0x7b build/default/production/PWM.o
- .debug_loc     0x00000000000000cd       0x26 build/default/production/WatchDog.o
+ .debug_loc     0x0000000000000052       0x36 build/default/production/PWM.o
+ .debug_loc     0x0000000000000088       0x26 build/default/production/WatchDog.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -570,14 +570,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0xb0
+.debug_ranges   0x0000000000000000       0xb8
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x18 build/default/production/ADC.o
- .debug_ranges  0x0000000000000018       0x28 build/default/production/PWM.o
- .debug_ranges  0x0000000000000040       0x20 build/default/production/USARTAtmega328P.o
- .debug_ranges  0x0000000000000060       0x18 build/default/production/WatchDog.o
- .debug_ranges  0x0000000000000078       0x28 build/default/production/main.o
- .debug_ranges  0x00000000000000a0       0x10 build/default/production/PCINT.o
+ .debug_ranges  0x0000000000000018       0x30 build/default/production/PWM.o
+ .debug_ranges  0x0000000000000048       0x20 build/default/production/USARTAtmega328P.o
+ .debug_ranges  0x0000000000000068       0x18 build/default/production/WatchDog.o
+ .debug_ranges  0x0000000000000080       0x28 build/default/production/main.o
+ .debug_ranges  0x00000000000000a8       0x10 build/default/production/PCINT.o
 
 .debug_macro
  *(.debug_macro)
@@ -599,145 +599,151 @@ LOAD data_init
                 0x0000000000800110        0x2 build/default/production/main.o
                 0x0000000000800110                _Contador
 
-.text.main      0x00000000000000c8      0x118
- .text.main     0x00000000000000c8      0x118 build/default/production/main.o
+.text.main      0x00000000000000c8      0x124
+ .text.main     0x00000000000000c8      0x124 build/default/production/main.o
                 0x00000000000000c8                main
 
 .text.Desmenuzado_ADC
-                0x00000000000001e0       0x66
+                0x00000000000001ec       0x66
  .text.Desmenuzado_ADC
-                0x00000000000001e0       0x66 build/default/production/main.o
-                0x00000000000001e0                Desmenuzado_ADC
+                0x00000000000001ec       0x66 build/default/production/main.o
+                0x00000000000001ec                Desmenuzado_ADC
 
 .text.PWM_setDuty
-                0x0000000000000246       0x5c
+                0x0000000000000252       0x5c
  .text.PWM_setDuty
-                0x0000000000000246       0x5c build/default/production/PWM.o
-                0x0000000000000246                PWM_setDuty
+                0x0000000000000252       0x5c build/default/production/PWM.o
+                0x0000000000000252                PWM_setDuty
 
 .text.Conversion_Char_Int
-                0x00000000000002a2       0x56
+                0x00000000000002ae       0x56
  .text.Conversion_Char_Int
-                0x00000000000002a2       0x56 build/default/production/main.o
-                0x00000000000002a2                Conversion_Char_Int
+                0x00000000000002ae       0x56 build/default/production/main.o
+                0x00000000000002ae                Conversion_Char_Int
 
 .text.__vector_3
-                0x00000000000002f8       0x50
+                0x0000000000000304       0x4c
  .text.__vector_3
-                0x00000000000002f8       0x50 build/default/production/main.o
-                0x00000000000002f8                __vector_3
-
-.text.PWM_init  0x0000000000000348       0x4c
- .text.PWM_init
-                0x0000000000000348       0x4c build/default/production/PWM.o
-                0x0000000000000348                PWM_init
+                0x0000000000000304       0x4c build/default/production/main.o
+                0x0000000000000304                __vector_3
 
 .text.ADC_GetData
-                0x0000000000000394       0x44
+                0x0000000000000350       0x44
  .text.ADC_GetData
-                0x0000000000000394       0x44 build/default/production/ADC.o
-                0x0000000000000394                ADC_GetData
+                0x0000000000000350       0x44 build/default/production/ADC.o
+                0x0000000000000350                ADC_GetData
 
 .text.libgcc.div
-                0x00000000000003d8       0x44
+                0x0000000000000394       0x44
  .text.libgcc.div
-                0x00000000000003d8       0x44 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
-                0x00000000000003d8                __udivmodsi4
+                0x0000000000000394       0x44 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
+                0x0000000000000394                __udivmodsi4
+
+.text.PWM_init  0x00000000000003d8       0x2a
+ .text.PWM_init
+                0x00000000000003d8       0x2a build/default/production/PWM.o
+                0x00000000000003d8                PWM_init
+
+.text.PWM_Update
+                0x0000000000000402       0x2a
+ .text.PWM_Update
+                0x0000000000000402       0x2a build/default/production/PWM.o
+                0x0000000000000402                PWM_Update
 
 .text.libgcc.div
-                0x000000000000041c       0x28
+                0x000000000000042c       0x28
  .text.libgcc.div
-                0x000000000000041c       0x28 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodhi4.o)
-                0x000000000000041c                _div
-                0x000000000000041c                __divmodhi4
+                0x000000000000042c       0x28 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodhi4.o)
+                0x000000000000042c                _div
+                0x000000000000042c                __divmodhi4
 
 .text.libgcc.div
-                0x0000000000000444       0x28
+                0x0000000000000454       0x28
  .text.libgcc.div
-                0x0000000000000444       0x28 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodhi4.o)
-                0x0000000000000444                __udivmodhi4
+                0x0000000000000454       0x28 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodhi4.o)
+                0x0000000000000454                __udivmodhi4
 
-.text.PWM_on    0x000000000000046c       0x20
- .text.PWM_on   0x000000000000046c       0x20 build/default/production/PWM.o
-                0x000000000000046c                PWM_on
+.text.PWM_on    0x000000000000047c       0x20
+ .text.PWM_on   0x000000000000047c       0x20 build/default/production/PWM.o
+                0x000000000000047c                PWM_on
 
 .text.libgcc.mul
-                0x000000000000048c       0x1e
+                0x000000000000049c       0x1e
  .text.libgcc.mul
-                0x000000000000048c       0x1e c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_umulhisi3.o)
-                0x000000000000048c                __umulhisi3
+                0x000000000000049c       0x1e c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_umulhisi3.o)
+                0x000000000000049c                __umulhisi3
 
 .text.USART_init
-                0x00000000000004aa       0x18
+                0x00000000000004ba       0x18
  .text.USART_init
-                0x00000000000004aa       0x18 build/default/production/USARTAtmega328P.o
-                0x00000000000004aa                USART_init
+                0x00000000000004ba       0x18 build/default/production/USARTAtmega328P.o
+                0x00000000000004ba                USART_init
 
 .text.PCINT_init
-                0x00000000000004c2       0x18
+                0x00000000000004d2       0x18
  .text.PCINT_init
-                0x00000000000004c2       0x18 build/default/production/PCINT.o
-                0x00000000000004c2                PCINT_init
+                0x00000000000004d2       0x18 build/default/production/PCINT.o
+                0x00000000000004d2                PCINT_init
 
 .text.libgcc.mul
-                0x00000000000004da       0x16
+                0x00000000000004ea       0x16
  .text.libgcc.mul
-                0x00000000000004da       0x16 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_muluhisi3.o)
-                0x00000000000004da                __muluhisi3
+                0x00000000000004ea       0x16 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_muluhisi3.o)
+                0x00000000000004ea                __muluhisi3
 
 .text.USART_SetData
-                0x00000000000004f0       0x10
+                0x0000000000000500       0x10
  .text.USART_SetData
-                0x00000000000004f0       0x10 build/default/production/USARTAtmega328P.o
-                0x00000000000004f0                USART_SetData
+                0x0000000000000500       0x10 build/default/production/USARTAtmega328P.o
+                0x0000000000000500                USART_SetData
 
 .text.USART_GetData
-                0x0000000000000500       0x10
+                0x0000000000000510       0x10
  .text.USART_GetData
-                0x0000000000000500       0x10 build/default/production/USARTAtmega328P.o
-                0x0000000000000500                USART_GetData
+                0x0000000000000510       0x10 build/default/production/USARTAtmega328P.o
+                0x0000000000000510                USART_GetData
 
 .text.libgcc.mul
-                0x0000000000000510       0x10
+                0x0000000000000520       0x10
  .text.libgcc.mul
-                0x0000000000000510       0x10 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_mulshisi3.o)
-                0x0000000000000510                __mulshisi3
-                0x0000000000000516                __mulohisi3
+                0x0000000000000520       0x10 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_mulshisi3.o)
+                0x0000000000000520                __mulshisi3
+                0x0000000000000526                __mulohisi3
 
 .text.WATCHDOG_init
-                0x0000000000000520        0xa
+                0x0000000000000530        0xa
  .text.WATCHDOG_init
-                0x0000000000000520        0xa build/default/production/WatchDog.o
-                0x0000000000000520                WATCHDOG_init
+                0x0000000000000530        0xa build/default/production/WatchDog.o
+                0x0000000000000530                WATCHDOG_init
 
-.text           0x000000000000052a        0x4
- .text          0x000000000000052a        0x4 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
-                0x000000000000052a                __vector_22
-                0x000000000000052a                __vector_1
-                0x000000000000052a                __vector_24
-                0x000000000000052a                __vector_12
-                0x000000000000052a                __bad_interrupt
-                0x000000000000052a                __vector_6
-                0x000000000000052a                __vector_23
-                0x000000000000052a                __vector_25
-                0x000000000000052a                __vector_11
-                0x000000000000052a                __vector_13
-                0x000000000000052a                __vector_17
-                0x000000000000052a                __vector_19
-                0x000000000000052a                __vector_7
-                0x000000000000052a                __vector_5
-                0x000000000000052a                __vector_4
-                0x000000000000052a                __vector_9
-                0x000000000000052a                __vector_2
-                0x000000000000052a                __vector_21
-                0x000000000000052a                __vector_15
-                0x000000000000052a                __vector_8
-                0x000000000000052a                __vector_14
-                0x000000000000052a                __vector_10
-                0x000000000000052a                __vector_16
-                0x000000000000052a                __vector_18
-                0x000000000000052a                __vector_20
+.text           0x000000000000053a        0x4
+ .text          0x000000000000053a        0x4 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
+                0x000000000000053a                __vector_22
+                0x000000000000053a                __vector_1
+                0x000000000000053a                __vector_24
+                0x000000000000053a                __vector_12
+                0x000000000000053a                __bad_interrupt
+                0x000000000000053a                __vector_6
+                0x000000000000053a                __vector_23
+                0x000000000000053a                __vector_25
+                0x000000000000053a                __vector_11
+                0x000000000000053a                __vector_13
+                0x000000000000053a                __vector_17
+                0x000000000000053a                __vector_19
+                0x000000000000053a                __vector_7
+                0x000000000000053a                __vector_5
+                0x000000000000053a                __vector_4
+                0x000000000000053a                __vector_9
+                0x000000000000053a                __vector_2
+                0x000000000000053a                __vector_21
+                0x000000000000053a                __vector_15
+                0x000000000000053a                __vector_8
+                0x000000000000053a                __vector_14
+                0x000000000000053a                __vector_10
+                0x000000000000053a                __vector_16
+                0x000000000000053a                __vector_18
+                0x000000000000053a                __vector_20
 
-.data.dato      0x0000000000800112        0x1 load address 0x000000000000052e
+.data.dato      0x0000000000800112        0x1 load address 0x000000000000053e
  .data.dato     0x0000000000800112        0x1 build/default/production/main.o
                 0x0000000000800112                dato
