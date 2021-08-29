@@ -10,7 +10,13 @@
 
 void PCINT_init()
 {
-    PCICR |= _BV(PCIE0);
-     PCIFR |= (1 << PCIF0);
-	PCMSK2 |= _BV(PCINT0);
+  
+    DDRD &=~ (1<<DDD2);		// Pin 2 del puerto D como entrada
+	PORTD |= (0<<PORTD2);	// pull-up activado
+
+	EICRA &=~ (1<<ISC00);	// INT0 configurado = Flanco de bajada
+	EICRA |= (1<<ISC01);
+
+	EIMSK |= (1<<INT0);		// INT0 activado
+
 }

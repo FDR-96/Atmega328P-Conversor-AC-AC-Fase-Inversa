@@ -1,7 +1,5 @@
 build/default/production/PWM.o.d build/default/production/PWM.o: PWM.c \
- c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\xc.h \
- c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\cci.h \
- c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\io.h \
+ PWM.h c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\inttypes.h \
  c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\stdint.h \
@@ -12,13 +10,12 @@ build/default/production/PWM.o.d build/default/production/PWM.o: PWM.c \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\version.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\lock.h \
+ c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\xc.h \
+ c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\cci.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h \
- c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
- PWM.h
+ c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\stdbool.h
 
-c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\xc.h:
-
-c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\cci.h:
+PWM.h:
 
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\io.h:
 
@@ -42,8 +39,10 @@ c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\lock.h:
 
+c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\xc.h:
+
+c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\cci.h:
+
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h:
 
 c:\program\ files\microchip\xc8\v2.31\avr\lib\gcc\avr\5.4.0\include\stdbool.h:
-
-PWM.h:
